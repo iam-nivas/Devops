@@ -1,0 +1,42 @@
+DOCKER COMMANDS :
+
+docker commit <Container ID> [New Name]
+
+docker exec -it <Img ID>
+
+docker network inspect bridge
+
+docker run --name CONTAINER A -d -p 8080:8080 Tomcat:8.0
+
+docker run --name CONTAINER B -d -p 8080:8080 Tomcat:8.0
+
+docker exec -it CONTAINER A /bin/bash
+
+----------------------------------------------------------------------------------------------
+                                   Making Network port in DOCKER
+
+docker network create mynetwork -a
+
+docker network connect mynetwork -a CONTAINER A
+
+docker network connect mynetwork -a CONTAINER B
+
+docker network list
+
+------------------------------------------------------------------------------------------------------
+
+netstat -ano | findstr 808
+ipconfig
+
+---------------------------------------------------------------------------------------------------------
+
+FROM              : To pull the base Image
+RUN               : To Execute COMMANDS
+CMD               : To provide Defaults for an Executing Container
+ENTRY POINT       : To Configure a Container that will run as an Executable
+WORKDIR           : To sets the working directory
+COPY              : To Copy a directory from your local Machine to the docker container
+ADD               : To Copy Files and Folders from your Local Machine to Docker Container
+EXPOSE            : Informs docker that the container Listens on the specified network ports at a runtime
+ENV               : To set enviroment variables
+------------------------------------------------------------------------------------------------------------------
