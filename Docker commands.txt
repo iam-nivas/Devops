@@ -40,3 +40,25 @@ ADD               : To Copy Files and Folders from your Local Machine to Docker 
 EXPOSE            : Informs docker that the container Listens on the specified network ports at a runtime
 ENV               : To set enviroment variables
 ------------------------------------------------------------------------------------------------------------------
+
+                                **** Important Docker Note ****
+									
+docker run -itd --name jenkins --network desktop_archimedis	 -p 8080:8080 ubuntu:22.04
+
+docker attach < container ID /> 
+
+#apt update
+#apt install net-tools
+#apt install iputils-ping
+
+Docker ports < Container ID />
+
+docker run -itd --network desktop_archimedis \
+--ip 10.100.12.226 \
+--name jenkins jfrog 
+
+
+
+$ docker network create netname --subnet=10.100.12.226/16
+
+$ docker run -it --net netname --ip 10.100.12.226 -p 8080:80 nginx
