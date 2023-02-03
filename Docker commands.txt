@@ -62,3 +62,21 @@ docker run -itd --network desktop_archimedis \
 $ docker network create netname --subnet=10.100.12.226/16
 
 $ docker run -it --net netname --ip 10.100.12.226 -p 8080:80 nginx
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+docker stop test01
+
+docker commit test01 test02
+
+docker run -p 8080:8080 -td test02
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+curl -O https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
+
+tar -xvzf apache-maven-3.8.7-bin.tar.gz
+
+
+
